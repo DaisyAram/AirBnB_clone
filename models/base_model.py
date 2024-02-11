@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: base.py
+Module: base
 """
 import models
 import uuid
