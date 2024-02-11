@@ -23,9 +23,9 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = "(hbnb) "
 
-    def precmd(self, line):
-        """Defines instructions to execute before <line> is interpreted.
-        """
+    """def precmd(self, line):
+        Defines instructions to execute before <line> is interpreted.
+        
         if not line:
             return '\n'
 
@@ -60,6 +60,7 @@ class HBNBCommand(cmd.Cmd):
                     match_tuple[1], match_tuple[0],
                     re.sub("[\"\']", "", args[0]),
                     re.sub("[\"\']", "", args[1]), args[2])
+    """
 
     def do_help(self, arg):
         """To get help on a command, type help <topic>.
