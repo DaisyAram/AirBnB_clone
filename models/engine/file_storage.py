@@ -58,15 +58,15 @@ class FileStorage():
             return
 
         with open(FileStorage.__file_path, 'r') as f:
-           deserialized = None
-           try:
-               deserialized = json.load(f)
-           except json.JSONDecodeError:
-               pass
+            deserialized = None
+            try:
+                deserialized = json.load(f)
+            except json.JSONDecodeError:
+                pass
 
-           if deserialized is None:
-               return
+            if deserialized is None:
+                return
 
-           FileStorage.__objects = {
-                   k: current_classes[k.split('.')[0]](**v)
-                   for k, v in deserialized.items()}
+            FileStorage.__objects = {
+                    k: current_classes[k.split('.')[0]](**v)
+                    for k, v in deserialized.items()}
